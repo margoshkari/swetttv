@@ -1,0 +1,42 @@
+body{
+    background-color: #182936;
+}
+.content{
+    margin-top: 2%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#first {
+    margin-right: 10%;
+    flex-flow: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#second {
+    width: 500px;
+    word-wrap: break-word;
+    text-align: center;
+    flex-flow: column;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+#info {
+    font-size: 20px;
+    text-align: left;
+}
+
+iframe{
+    border-radius: 15px;
+    -moz-box-shadow: 0 0 20px #20bcc6;
+    -webkit-box-shadow: 0 0 20px #20bcc6;
+    box-shadow: 0 0 20px #20bcc6;
+    border: 3px solid #20bcc6;
+}

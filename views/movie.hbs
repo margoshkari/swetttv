@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="form.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <title>SweetTV</title>
+</head>
+
+<body>
+    {{!-- NAVPANEL --}}
+    <nav>
+        <img src="https://sweet.tv/images/v2/logo_sweettv.svg">
+        <a href="https://sweet.tv/en/tv">TV</a>
+        <a href="/">Films</a>
+        <a href="https://sweet.tv/en/series">TV series</a>
+        <a href="https://sweet.tv/en/cartoons">Cartoons</a>
+        <a href="https://sweet.tv/en/education">Education</a>
+        <div style="width:50%;">
+            <a href="/login" id="loginbtn">Sign in</a>
+            <a href="" id="logoutbtn" style="display:none;">Logout</a>
+        </div>
+    </nav>
+
+
+    <center>
+        <h1> Add Movie </h1>
+    </center>
+    <div class="content">
+        <form action="/postMovie" method="POST">
+            <div class="container">
+                <label>Movie name : </label>
+                <input type="text" placeholder="Enter Movie :" name="MovieName" required minlength="3" maxlength="30">
+                <label>Movie info : </label>
+                <input type="text" placeholder="Enter Info :" name="Info" required minlength="5" maxlength="1000">
+                <label>Image Link: </label>
+                <input type="text" placeholder="Enter Image Link :" name="Image" required minlength="5">
+                <label>Movie Link: </label>
+                <input type="text" placeholder="Enter Movie Link :" name="MovieLink" required minlength="5">
+                <label>Genre : </label>
+                <input type="text" placeholder="Enter Genre :" name="GenreName" required minlength="3" maxlength="20">
+                <label>Country : </label>
+                <input type="text" placeholder="Enter Country :" name="CountryName" required minlength="3"
+                    maxlength="20">
+                <label>Year : </label>
+                <input type="number" placeholder="Enter Year :" name="Year" required min="1900" max="2022">
+
+                <button class="submitbtn" type="submit">Add</button>
+            </div>
+        </form>
+        <a href="/admin"><button class="submitbtn"  style="margin-top: 15%;">Back</button></a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="form.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <title>SweetTV</title>
+</head>
+
+<body>
+    {{!-- NAVPANEL --}}
+    <nav>
+        <img src="https://sweet.tv/images/v2/logo_sweettv.svg">
+        <a href="https://sweet.tv/en/tv">TV</a>
+        <a href="/">Films</a>
+        <a href="https://sweet.tv/en/series">TV series</a>
+        <a href="https://sweet.tv/en/cartoons">Cartoons</a>
+        <a href="https://sweet.tv/en/education">Education</a>
+        <div style="width:50%;">
+            <a href="/login" id="loginbtn">Sign in</a>
+            <a href="" id="logoutbtn" style="display:none;">Logout</a>
+        </div>
+    </nav>
+
+
+    <center>
+        <h1> Add Year </h1>
+    </center>
+    <div class="content">
+        <form action="/postYear" method="POST">
+            <div class="container">
+                <label>Year : </label>
+                <input type="number" placeholder="Enter Year" name="Year" required min="1900" max="2022">
+                <button class="submitbtn" type="submit">Add</button>
+            </div>
+        </form>
+
+        <center style="margin-top: 7%;"> <h1> Remove Year </h1> </center>
+        <form action="/deleteYear" method="POST">
+            <div class="container">
+                <label>Year : </label>
+                <input type="number" placeholder="Enter Year" name="Year" required min="1900" max="2022">
+                <button class="submitbtn" type="submit">Delete</button>
+            </div>
+        </form>
+    <a href="/admin"><button class="submitbtn"  style="margin-top: 15%;">Back</button></a>
+    </div>
+</body>
+
+</html>

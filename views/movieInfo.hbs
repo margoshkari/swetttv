@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="info.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    {{!-- NAVPANEL --}}
+    <nav>
+        <img src="https://sweet.tv/images/v2/logo_sweettv.svg">
+        <a href="https://sweet.tv/en/tv">TV</a>
+        <a href="/">Films</a>
+        <a href="https://sweet.tv/en/series">TV series</a>
+        <a href="https://sweet.tv/en/cartoons">Cartoons</a>
+        <a href="https://sweet.tv/en/education">Education</a>
+        <div style="width:50%;">
+            <a href="/login" id="loginbtn">Sign in</a>
+            <a href="" id="logoutbtn" style="display:none;">Logout</a>
+        </div>
+    </nav>
+
+    {{#each movies}}
+    <div class="content">
+        <div id="first">
+            <img src="{{this.ImageName}}" draggable="false" height="430px" width="auto" style="border-radius: 10px;"
+                name="{{this.MovieName}}" class="image">
+        </div>
+        <div id="second">
+            <h3>{{this.MovieName}}</h3>
+            <h4>Genre: {{this.GenreName}}</h4>
+            <p id="info">Info: {{this.Info}}</p>
+        </div>
+    </div>
+    <div style="width:100%; display:flex; align-items:center; justify-content: center; margin-top: 5%;">
+        <iframe width="660" height="415" src="{{this.MovieLink}}" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    {{/each}}
+
+
+    {{!-- FOOTER --}}
+    <footer>
+        <div style="height:80%; display:flex;align-items:center;justify-content:center;margin-top: 5%;">
+            <div class="first" style="display:flex; flex-flow: column;color:white;">
+                <h4>Menu</h4>
+                <a>Home</a>
+                <a>TV</a>
+                <a>Films</a>
+                <a>TV series</a>
+                <a>Cartoons</a>
+                <a>News</a>
+            </div>
+            <div class="second" style="display:flex; flex-flow: column;color:white;">
+                <h4>Tarifs</h4>
+                <a>Promo code</a>
+                <a>Payment</a>
+                <a>About us</a>
+                <a>Hollywood in Ukraine</a>
+                <a>IT support</a>
+                <a>Battle of Bloggers</a>
+            </div>
+            <div class="third" style="display:flex; flex-flow: column;color:white;">
+                <h4>About company</h4>
+                <a>Cinema fund</a>
+                <a>Press</a>
+                <a>Partners</a>
+                <a>Contact us</a>
+                <a>Agreement</a>
+                <a>Sitemap</a>
+            </div>
+            <div class="forth" style="color:white;">
+                <h4>Address</h4>
+                <p>03124, Kyiv,<br>
+                    7, Mykoly Vasylenka Str.<br>
+                    GELIOS Business Center</p>
+            </div>
+        </div>
+        <div style="width: 100%; text-align:center;">
+            <p style="color: white;">© SWEET.TV 2022. v3.5.59 All rights reserved.<br>
+                Content protected by Axghouse AntiPiracy LLC.
+
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

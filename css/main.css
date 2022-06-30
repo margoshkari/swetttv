@@ -1,0 +1,203 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #182936;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 210px 210px 210px 210px 210px 210px;
+    grid-template-rows: 400px 400px;
+    grid-gap: 1rem;
+}
+
+#page {
+    margin-top: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.elem {
+    background-color: #182936;
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    border-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-flow: column;
+    text-align: center;
+}
+
+.elem:hover>img {
+    border: 3px solid #20bcc6;
+}
+
+.elem:hover>h3 {
+    color: #20bcc6;
+}
+
+.elem>h3 {
+    align-self: flex-start;
+    margin-bottom: 0;
+}
+
+.elem>h5 {
+    margin: 0;
+    padding: 0;
+    align-self: flex-start;
+    color: rgb(161, 161, 161);
+}
+
+.dropdown {
+    width: 120px;
+    height: 35px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+    background-color: #0f1c26;
+    color: white;
+    border: none;
+}
+
+#selectBoxCountry,
+#selectBoxYear,
+#submitgenrebtn {
+    margin-left: 3%;
+}
+
+#selectBoxCountry:hover,
+#selectBoxYear:hover,
+#selectBoxGenre:hover {
+    -moz-box-shadow: 0 0 7px #20bcc6;
+    -webkit-box-shadow: 0 0 7px #20bcc6;
+    box-shadow: 0 0 7px #20bcc6;
+    border: 1px solid #20bcc6;
+}
+
+#submitgenrebtn {
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #0f1c26;
+    color: white;
+    border: none;
+}
+
+#submitgenrebtn:hover {
+    cursor: pointer;
+    -moz-box-shadow: 0 0 7px #20bcc6;
+    -webkit-box-shadow: 0 0 7px #20bcc6;
+    box-shadow: 0 0 7px #20bcc6;
+    border: 1px solid #20bcc6;
+}
+
+.filters {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#submitgenrebtn {
+    height: 30px;
+    margin-left: 1%;
+}
+
+.deletebtn {
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #a12424a8;
+    color: white;
+    border: none;
+}
+
+.btn {
+    margin-top: 3%;
+    height: 30px;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #0f1c26;
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #1e384d;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(21, 57, 76, .97);
+    ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav>a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2%;
+    font-weight: bold;
+}
+
+#loginbtn,
+#logoutbtn {
+    color: white;
+    text-decoration: none;
+    margin-left: 2%;
+    font-weight: bold;
+    font-size: 20px;
+    float: right;
+
+}
+
+#loginbtn:hover,
+#logoutbtn:hover {
+    color: #20bcc6;
+    text-decoration: none;
+}
+
+footer {
+    width: 100%;
+    height: 500px;
+    background-color: #061017;
+}
+
+.first>a {
+    font-size: 15px;
+    margin-bottom: 25%;
+}
+
+.second>a {
+    font-size: 15px;
+    margin-bottom: 10%;
+}
+.third > a{
+    font-size: 15px;
+    margin-bottom: 10%;
+}
+
+.first>a:hover,
+.second>a:hover,
+.third>a:hover {
+    cursor: pointer;
+    color: #20bcc6;
+}
+
+.second, .third, .forth {
+    margin-left: 5%;
+}

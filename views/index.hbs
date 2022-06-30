@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet">
+    <title>SweetTV</title>
+</head>
+
+<body>
+    {{!-- NAVPANEL --}}
+    <nav>
+        <img src="https://sweet.tv/images/v2/logo_sweettv.svg">
+        <a href="https://sweet.tv/en/tv">TV</a>
+        <a href="/">Films</a>
+        <a href="https://sweet.tv/en/series">TV series</a>
+        <a href="https://sweet.tv/en/cartoons">Cartoons</a>
+        <a href="https://sweet.tv/en/education">Education</a>
+        <div style="width:50%;">
+            <a href="/login" id="loginbtn">Sign in</a>
+            <a href="" id="logoutbtn" style="display:none;">Logout</a>
+        </div>
+    </nav>
+
+    {{!-- TITLE --}}
+    {{#each selectedgenres}}
+    <div style="width: 100%; text-align: center;">
+        <h1 style="color:white;">{{this.GenreName}}</h1>
+    </div>
+    {{/each}}
+
+    {{!-- LIST GENRES --}}
+    <div style="display:flex; align-itens:center; justify-content:center;">
+        <form action="/filter" method="POST" style="display:flex;">
+            <div class="filters">
+                <select id="selectBoxGenre" class="dropdown" name="dropdown" onchange="changeGenreFunc();">
+                    <option class="genreitem" selected>Genres</option>
+                    {{#each genres}}
+                    <option class="genreitem">{{this.GenreName}}</option>
+                    {{/each}}
+                </select>
+
+                <select id="selectBoxCountry" class="dropdown" name="dropdown" onchange="changeCountryFunc();">
+                    <option class="countryitem" selected>Country</option>
+                    {{#each countries}}
+                    <option class="countryitem">{{this.CountryName}}</option>
+                    {{/each}}
+                </select>
+
+                <select id="selectBoxYear" class="dropdown" name="dropdown" onchange="changeYearFunc();">
+                    <option class="yearitem" selected>Year</option>
+                    {{#each years}}
+                    <option class="yearitem">{{this.Year}}</option>
+                    {{/each}}
+                </select>
+
+
+                <input id="genreinput" type="text" name="genre" value="" style="display:none;" />
+                <input id="countryinput" type="text" name="country" value="" style="display:none;" />
+                <input id="yearinput" type="text" name="year" value="" style="display:none;" />
+                <button id="submitgenrebtn" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+    {{!-- LIST FILMS --}}
+    <div id="page">
+        <form action="/movieInfo" method="POST">
+            <div id="content">
+                {{#each movies}}
+                <div class="elem" name="{{this.MovieName}}">
+                    <img src="{{this.ImageName}}" draggable="false" height="300px" width="200px"
+                        style="border-radius: 10px;" name="{{this.MovieName}}" class="image">
+                    <h3>{{this.MovieName}}</h3>
+                    <h5>{{this.GenreName}}</h5>
+                </div>
+                {{/each}}
+            </div>
+            <input id="movieinput" type="text" name="movie" value="" style="display:none;" />
+            <button id="submitbtn" type="submit" style="display:none;">S</button>
+        </form>
+        </table>
+    </div>
+
+
+
+
+    {{!-- FOOTER --}}
+    <footer>
+        <div style="height:80%; display:flex;align-items:center;justify-content:center;">
+            <div class="first" style="display:flex; flex-flow: column;color:white;">
+                <h4>Menu</h4>
+                <a>Home</a>
+                <a>TV</a>
+                <a>Films</a>
+                <a>TV series</a>
+                <a>Cartoons</a>
+                <a>News</a>
+            </div>
+            <div class="second" style="display:flex; flex-flow: column;color:white;">
+                <h4>Tarifs</h4>
+                <a>Promo code</a>
+                <a>Payment</a>
+                <a>About us</a>
+                <a>Hollywood in Ukraine</a>
+                <a>IT support</a>
+                <a>Battle of Bloggers</a>
+            </div>
+            <div class="third" style="display:flex; flex-flow: column;color:white;">
+                <h4>About company</h4>
+                <a>Cinema fund</a>
+                <a>Press</a>
+                <a>Partners</a>
+                <a>Contact us</a>
+                <a>Agreement</a>
+                <a>Sitemap</a>
+            </div>
+            <div class="forth" style="color:white;">
+                <h4>Address</h4>
+                <p>03124, Kyiv,<br>
+                    7, Mykoly Vasylenka Str.<br>
+                    GELIOS Business Center</p>
+            </div>
+        </div>
+        <div style="width: 100%; text-align:center;">
+            <p style="color: white;">© SWEET.TV 2022. v3.5.59 All rights reserved.<br>
+                Content protected by Axghouse AntiPiracy LLC.
+
+            </p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

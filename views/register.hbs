@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="form.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <title>SweetTV</title>
+</head>
+
+<body>
+    {{!-- NAVPANEL --}}
+    <nav>
+        <img src="https://sweet.tv/images/v2/logo_sweettv.svg">
+        <a href="https://sweet.tv/en/tv">TV</a>
+        <a href="/">Films</a>
+        <a href="https://sweet.tv/en/series">TV series</a>
+        <a href="https://sweet.tv/en/cartoons">Cartoons</a>
+        <a href="https://sweet.tv/en/education">Education</a>
+        <div style="width:50%;">
+            <a href="/login" id="loginbtn">Sign in</a>
+            <a href="" id="logoutbtn" style="display:none;">Logout</a>
+        </div>
+    </nav>
+
+
+    <center> <h1> Register </h1> </center>
+<div class="content">
+    <form action="/postRegister" method="POST">
+        <div class="container">
+            <label>Login : </label>
+            <input type="text" placeholder="Enter Login" name="login" required minlength="5">
+            <label>Email : </label>
+            <input type="email" placeholder="Enter Email" name="email" required minlength="5">
+            <label>Password : </label>
+            <input type="password" placeholder="Enter Password" name="password" required minlength="5">
+            <button class="submitbtn" type="submit">Register</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
